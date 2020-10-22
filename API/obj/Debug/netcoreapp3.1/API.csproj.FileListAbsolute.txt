@@ -57,3 +57,11 @@ D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\runti
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
