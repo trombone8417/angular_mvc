@@ -65,3 +65,4 @@ D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Micro
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Data\UserSeedData.json
