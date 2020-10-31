@@ -8,8 +8,6 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { NavigationExtras, Router } from '@angular/router';
-import { nextTick } from 'process';
-// import { request } from 'http';
 import { catchError } from 'rxjs/operators';
 
 @Injectable()

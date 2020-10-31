@@ -33,8 +33,7 @@ namespace API
 
         }
 
-        public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         // Method 'Translate' in type 'Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeMemberTranslator' from assembly 'Microsoft.EntityFrameworkCore.Sqlite, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' does not have an implementation.
         // 原因：版本不符

@@ -6,7 +6,8 @@ import { Member } from '../_models/member';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user')).token
+    // members.service.ts:9 Uncaught TypeError: Cannot read property 'token' of null
+     // Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user')).token
   })
 }
 

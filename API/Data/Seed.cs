@@ -16,6 +16,7 @@ namespace API.Data
 
             var userData = await System.IO.File.ReadAllTextAsync("Data/UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
+            if (users == null) return;
 
             foreach (var user in users)
             {
@@ -24,7 +25,7 @@ namespace API.Data
                 user.PasswordHash = hamc.ComputeHash(Encoding.UTF8.GetBytes("password"));
                 user.PasswordSalt = hamc.Key;
 
-                context.Users.Add(user);
+                await context.Users.AddAsync(user);
             }
             await context.SaveChangesAsync();
         }
