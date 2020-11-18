@@ -36,7 +36,15 @@ namespace API.Controllers
 
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
+            var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
+            // 使用者
+            userParams.CurrentUsername = user.UserName;
+            // 使用者性別
+            if (string.IsNullOrEmpty(userParams.Gender))
+            userParams.Gender = user.Gender== "male" ? "female" : "male";
+
             var users = await _userRepository.GetMembersAsync(userParams);
+            // 分頁
             Response.AddPaginationHeader(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
 
             return Ok(users);
@@ -68,14 +76,17 @@ namespace API.Controllers
         {
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
             var result = await _photoService.AddPhotoAsync(file);
+            // 若錯誤訊息不為空的話，回覆錯誤
             if (result.Error != null) return BadRequest(result.Error.Message);
             var photo = new Photo
             {
                 Url = result.SecureUrl.AbsoluteUri,
                 PublicId = result.PublicId
             };
+            // 若使用者沒有照片的話
             if (user.Photos.Count == 0)
             {
+                // 設為主要照片
                 photo.IsMain = true;
             }
 
@@ -107,16 +118,17 @@ namespace API.Controllers
             if(await _userRepository.SaveAllAsync()) return NoContent();
             return BadRequest("Failed to set main photo");
         }
-
+        
         [HttpDelete("delete-photo/{photoId}")]
         public async Task<ActionResult> DeletePhoto(int photoId)
         {
+            // 使用者
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
-
+            // 照片ID
             var photo = user.Photos.FirstOrDefault(x => x.Id == photoId);
-
+            // 照片ID為空，回覆NotFound
             if (photo == null) return NotFound();
-
+            // 照片為封面照片的話，回覆BadRequest
             if (photo.IsMain) return BadRequest("You cannot delete your main photo");
 
             if (photo.PublicId != null)
@@ -125,7 +137,7 @@ namespace API.Controllers
                 if (result.Error != null) return BadRequest(result.Error.Message);
 
             }
-
+            // 刪除照片
             user.Photos.Remove(photo);
             
             if(await _userRepository.SaveAllAsync()) return Ok();

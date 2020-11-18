@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,28 +25,38 @@ namespace API.Data
 
         public async Task<MemberDto> GetMemberAsync(string username)
         {
+            // 會員資料(帳號名稱)
             return await _context.Users
                 .Where(x => x.UserName == username)
                 .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
                 .SingleOrDefaultAsync();
         }
-
+        
         public async Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams)
         {
-            var query = _context.Users
-                .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-                .AsNoTracking();
+            var query = _context.Users.AsQueryable();
+            query = query.Where(u => u.UserName != userParams.CurrentUsername);
+            // 選擇性別
+            query = query.Where(u => u.Gender == userParams.Gender);
+            // 最小年齡
+            var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+            // 最大年齡
+            var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+            // sql年齡區間
+            query = query.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);    
             
-            return await PagedList<MemberDto>.CreateAsync(query, userParams.PageNumber, userParams.PageSize);    
+            return await PagedList<MemberDto>.CreateAsync(query.ProjectTo<MemberDto>(_mapper.ConfigurationProvider).AsNoTracking(), userParams.PageNumber, userParams.PageSize);    
         }
 
         public async Task<AppUser> GetUserByIdAsync(int id)
         {
+            // 使用者ID
             return await _context.Users.FindAsync(id);
         }
 
         public async Task<AppUser> GetUserByUsernameAsync(string username)
         {
+            // 帳號名稱
             return await _context.Users
                 .Include(p => p.Photos)
                 .SingleOrDefaultAsync(x => x.UserName == username);
