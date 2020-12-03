@@ -17,18 +17,18 @@ export class MemberListComponent implements OnInit {
   members: Member[];
   pagination: Pagination;
   userParams: UserParams;
-  user:User;
+  user: User;
 
-  genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}];
+  genderList = [{ value: 'male', display: 'Males' }, { value: 'female', display: 'Females' }];
 
   constructor(private memberService: MembersService) {
     this.userParams = this.memberService.getUserParams();
-   }
+  }
 
   ngOnInit(): void {
     this.loadMembers();
   }
-  
+
   loadMembers() {
     this.memberService.setUserParams(this.userParams);
     this.memberService.getMembers(this.userParams).subscribe(response => {
@@ -36,11 +36,11 @@ export class MemberListComponent implements OnInit {
       this.pagination = response.pagination;
     })
   }
-  resetFilters(){
+  resetFilters() {
     this.userParams = this.memberService.resetUserParams();
     this.loadMembers();
   }
-
+// 換頁
   pageChanged(event: any) {
     this.userParams.pageNumber = event.page;
     this.memberService.setUserParams(this.userParams);

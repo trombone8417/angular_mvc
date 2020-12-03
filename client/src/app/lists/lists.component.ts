@@ -19,7 +19,7 @@ export class ListsComponent implements OnInit {
   ngOnInit(): void {
     this.loadLikes();
   }
-
+// 載入按讚(被按讚)的結果
   loadLikes(){
     this.memberService.getLikes(this.predicate, this.pageNumber, this.pageSize).subscribe(response =>{
 
@@ -27,7 +27,7 @@ export class ListsComponent implements OnInit {
       this.pagination = response.pagination;
     })
   }
-
+// 換頁
   pageChanged(event: any){
     this.pageNumber= event.page;
     this.loadLikes();
