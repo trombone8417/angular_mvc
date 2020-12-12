@@ -30,10 +30,19 @@ export class MessagesComponent implements OnInit {
       this.loading = false;
     })
   }
+
+  deleteMessage(id: number){
+    this.messageService.deleteMessage(id).subscribe(() => {
+      this.messages.splice(this.messages.findIndex(m => m.id === id), 1);
+    })
+  }
+
   // 換頁
   pageChanged(event: any) {
     this.pageNumber = event.page;
     this.loadMessages();
   }
+
+  
 }
 
