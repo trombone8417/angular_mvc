@@ -71,3 +71,8 @@ D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\AutoM
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Middleware\obj\API.csproj.nuget.dgspec.json
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Middleware\obj\project.assets.json
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

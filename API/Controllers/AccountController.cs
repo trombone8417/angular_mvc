@@ -35,13 +35,9 @@ namespace API.Controllers
 
             var user = _mapper.Map<AppUser>(registerDto);
 
-            using var hmac = new HMACSHA512();
             // 帳號轉小寫
             user.UserName = registerDto.Username.ToLower();
-            // 密碼加密
-            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password));
-            // key
-            user.PasswordSalt = hmac.Key;
+            
             // 加入使用者
             _context.Users.Add(user);
             // 儲存
@@ -65,15 +61,7 @@ namespace API.Controllers
             // 若使用者為空，回覆無效帳號
             if (user == null) return Unauthorized("Invalid username");
 
-            using var hmac = new HMACSHA512(user.PasswordSalt);
-
-            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
-            // 驗證密碼
-            for (int i = 0; i < computedHash.Length; i++)
-            {
-                if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid password");
-
-            }
+           
             return new UserDto
             {
                 Username = user.UserName,
