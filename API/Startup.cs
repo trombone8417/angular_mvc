@@ -58,7 +58,10 @@ namespace API
 
             // 跨域請求 Cross-Origin Requests (CORS)
             // 加入憑證
-            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+            app.UseCors(x => x.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            .WithOrigins("https://localhost:4200"));
 
             app.UseAuthentication();
 

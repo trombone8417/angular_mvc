@@ -9,7 +9,11 @@
            "request": "launch",
            "type": "pwa-chrome",
            "url": "https://localhost:4200",
-           "webRoot": "${workspaceFolder}/client"
+           "webRoot": "${workspaceFolder}/client",
+           "skipFiles": [
+            "<node_internals>/**",
+            "${workspaceRoot}/client/node_modules/**/*.js",
+          ]
        },
 
    
