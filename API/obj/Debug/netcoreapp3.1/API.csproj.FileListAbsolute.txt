@@ -1,6 +1,5 @@
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\appsettings.json
-D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\API.exe
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\API.deps.json
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\API.runtimeconfig.json
@@ -76,3 +75,6 @@ D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Micro
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 D:\桌面\side_project\asp.net mvc\angular_mvc\API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\桌面\side_project\asp.net mvc\angular_mvc\api\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
+D:\桌面\side_project\asp.net mvc\angular_mvc\api\obj\Debug\netcoreapp3.1\scopedcss\bundle\API.styles.css
+D:\桌面\side_project\asp.net mvc\angular_mvc\api\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache

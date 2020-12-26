@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\API\\API.csproj": {}
+    "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\api\\API.csproj": {}
   },
   "projects": {
-    "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\API\\API.csproj": {
+    "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\API\\API.csproj",
+        "projectUniqueName": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\API\\API.csproj",
+        "projectPath": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\api\\API.csproj",
         "packagesPath": "C:\\Users\\kuei\\.nuget\\packages\\",
-        "outputPath": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\API\\obj\\",
+        "outputPath": "D:\\桌面\\side_project\\asp.net mvc\\angular_mvc\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kuei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -87,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
