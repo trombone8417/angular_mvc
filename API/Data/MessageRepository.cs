@@ -53,7 +53,7 @@ namespace API.Data
         public async Task<Group> GetMessageGroup(string groupName)
         {
             return await _context.Groups
-            .Include(x =>x.Collections)
+            .Include(x =>x.Connections)
             .FirstOrDefaultAsync(x => x.Name == groupName);
         }
 
@@ -90,7 +90,7 @@ namespace API.Data
             {
                 foreach (var message in unreadMessages)
                 {
-                    message.DateRead = DateTime.Now;
+                    message.DateRead = DateTime.UtcNow;
                 }
                 await _context.SaveChangesAsync();
             }
