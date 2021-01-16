@@ -4,21 +4,34 @@
 
 ## 成果
 1. 起始指令 (terminal)
+
 前端
+
 `kuei@MSI /angular_mvc (master)
 $ cd client`
+
 `kuei@MSI /angular_mvc/client (master)
 $ ng serve`
+
 後端
+
 `kuei@MSI /angular_mvc (master)
 $ cd api`
+
 `kuei@MSI /angular_mvc/api (master)
 $ dotnet watch run`
+
 2. 打開網址：https://localhost:4200/
+
 3. 展示
+
 登入頁面
 ![登入頁面](md-img/login.png)
+
+儀表板
 ![儀表板](md-img/dashboard.png)
+
+即時通訊
 ![即時通訊](md-img/message.png)
 
 
